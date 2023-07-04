@@ -1,4 +1,4 @@
-package IntroTopics;
+package introtopics;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class ValidTriangle {
     }
 
     public static boolean isEveryAngleValid(int angle1, int angle2, int angle3) {
-        /**
+        /*
          * Checks if every angle of a triangle is valid (greater than 0).
          *
          * @param angle1 The first angle of the triangle.
@@ -37,7 +37,7 @@ public class ValidTriangle {
     }
 
     public static boolean isSum180(int angle1, int angle2, int angle3) {
-        /**
+        /*
          * Checks if the sum of the angles of a triangle is equal to 180 degrees.
          *
          * @param angle1 The first angle of the triangle.
@@ -50,7 +50,7 @@ public class ValidTriangle {
     }
 
     public static boolean isValidTriangle(int angle1, int angle2, int angle3) {
-        /**
+        /*
          * Checks if the given angles form a valid triangle.
          *
          * @param angle1 The first angle of the triangle.

@@ -1,4 +1,4 @@
-package IntroTopics;
+package introtopics;
 
 import java.util.Scanner;
 

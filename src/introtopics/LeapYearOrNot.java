@@ -1,4 +1,4 @@
-package IntroTopics;
+package introtopics;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class LeapYearOrNot {
     }
 
     public static boolean isLeapYear(int year) {
-        /**
+        /*
          * Checks if a given year is a leap year.
          *
          * @param year The year to be checked.

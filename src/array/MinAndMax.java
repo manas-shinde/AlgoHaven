@@ -4,9 +4,9 @@ public class MinAndMax {
     public static void main(String[] args) {
         int[] arr = new int[5];
 
-        ReverseArray.fillArray(arr);
+        ArrayMethods.fillArray(arr);
 
-        ReverseArray.display(arr);
+        ArrayMethods.display(arr);
 
         System.out.println("Minimum in array :" + findMinimum(arr));
         System.out.println("Maximum in array : " + findMaximum(arr));

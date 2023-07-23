@@ -31,4 +31,13 @@ public class ArrayMethods {
             arr[i] = scanner.nextInt();
         }
     }
+
+    public static int[] subarray(int start, int end, int[] arr) {
+        int[] ans = new int[end - start];
+        int index = 0;
+        while (start < end) {
+            ans[index++] = arr[start++];
+        }
+        return ans;
+    }
 }

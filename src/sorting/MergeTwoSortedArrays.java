@@ -3,7 +3,7 @@ package sorting;
 import array.ArrayMethods;
 
 public class MergeTwoSortedArrays {
-    public static int[] merge(int[] arr1, int[] arr2) {
+    public static int[] mergeTwoSortedArray(int[] arr1, int[] arr2) {
         int n = arr1.length;
         int m = arr2.length;
         int[] resultArr = new int[n + m];
@@ -29,7 +29,7 @@ public class MergeTwoSortedArrays {
         int[] arr1 = new int[]{1, 3, 5, 7, 9};
         int[] arr2 = new int[]{2, 4, 6, 8};
 
-        int[] result = merge(arr1, arr2);
+        int[] result = mergeTwoSortedArray(arr1, arr2);
 
         ArrayMethods.display(result);
     }

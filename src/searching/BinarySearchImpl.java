@@ -42,7 +42,7 @@ public class BinarySearchImpl {
                 return true;
             } else if (arr[mid] > element) {
                 end = mid - 1;
-            } else if (arr[mid] < element) {
+            } else {
                 start = mid + 1;
             }
         }

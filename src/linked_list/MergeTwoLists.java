@@ -72,23 +72,20 @@ public class MergeTwoLists {
         ListNode prevHead = new ListNode(-1, null);
         ListNode prev = prevHead;
 
-        ListNode l1 = list1;
-        ListNode l2 = list2;
-
         // Traverse both lists, comparing and merging nodes
-        while (l1 != null && l2 != null) {
-            if (l2.val <= l1.val) {
-                prev.next = l2;
-                l2 = l2.next;
+        while (list1 != null && list2 != null) {
+            if (list2.val <= list1.val) {
+                prev.next = list2;
+                list2 = list2.next;
             } else {
-                prev.next = l1;
-                l1 = l1.next;
+                prev.next = list1;
+                list1 = list1.next;
             }
             prev = prev.next;
         }
 
         // Handle remaining nodes in either list
-        prev.next = (l1 == null) ? l2 : l1;
+        prev.next = (list1 == null) ? list2 : list1;
 
         return prevHead.next;
     }

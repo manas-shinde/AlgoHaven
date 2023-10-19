@@ -38,6 +38,9 @@ public class ReorderList {
      * @param head The head of the linked list.
      */
     public void reorderList(ListNode head) {
+
+        if (head == null || head.next == null) return;
+
         //Step - 1: slice the list into two parts
         ListNode slow = head;
         ListNode fast = head;

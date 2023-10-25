@@ -1,7 +1,5 @@
 package linked_list;
 
-import java.util.HashMap;
-
 public class LinkedListCycleII {
     /**
      * Detects and returns the node where a cycle begins in a linked list.
@@ -18,7 +16,7 @@ public class LinkedListCycleII {
         ListNode fast = head;
 
         // Phase 1: Determine if there is a cycle and find the meeting point.
-        while (fast != null && fast.next != null) {
+        while (slow != null && fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {

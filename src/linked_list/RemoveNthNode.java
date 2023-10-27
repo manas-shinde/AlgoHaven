@@ -9,6 +9,7 @@ public class RemoveNthNode {
      * @return The head of the modified linked list.
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        //In this approach , need to iterate over linked list twice.
 
         // Create a dummy node to handle the case of removing the head.
         ListNode dummy = new ListNode(0);
@@ -37,6 +38,22 @@ public class RemoveNthNode {
         return dummy.next;
     }
 
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode first = dummy;
+        ListNode second = dummy;
+
+        for (int i = 1; i <= n + 1; i++) {
+            first = first.next;
+        }
+        while (first != null) {
+            first = first.next;
+            second = second.next;
+        }
+        second.next = second.next.next;
+        return dummy.next;
+    }
     public static void main(String[] args) {
         // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
         ListNode head = new ListNode(1);
@@ -56,7 +73,7 @@ public class RemoveNthNode {
         int n = 2;
 
         // Call the removeNthFromEnd method
-        head = remover.removeNthFromEnd(head, n);
+        head = remover.removeNthFromEnd1(head, n);
 
         // Print the modified list
         System.out.println("Modified List:");
